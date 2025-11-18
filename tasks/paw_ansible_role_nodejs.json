@@ -1,0 +1,84 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Execute the entire Ansible role imperatively",
+  "input_method": "environment",
+  "parameters": {
+    "npm_config_prefix": {
+      "description": "The directory for global installations.",
+      "type": "Optional[String]"
+    },
+    "nodejs_version": {
+      "description": "Version numbers from Nodesource: https://github.com/nodesource/distributions",
+      "type": "Optional[String]"
+    },
+    "npm_config_unsafe_perm": {
+      "description": "set explicitly to false, then installing as a non-root user will fail.",
+      "type": "Optional[String]"
+    },
+    "nodejs_npm_global_packages": {
+      "description": "Define a list of global packages to be installed with NPM.",
+      "type": "Optional[Array]"
+    },
+    "nodejs_package_json_path": {
+      "description": "The path of a package.json file used to install packages globally.",
+      "type": "Optional[String]"
+    },
+    "nodejs_generate_etc_profile": {
+      "description": "Set to false if you need to handle this manually with a per-user install.",
+      "type": "Optional[String]"
+    },
+    "par_tags": {
+      "description": "An array of Ansible tags to execute (optional)",
+      "type": "Optional[Array[String]]"
+    },
+    "par_skip_tags": {
+      "description": "An array of Ansible tags to skip (optional)",
+      "type": "Optional[Array[String]]"
+    },
+    "par_start_at_task": {
+      "description": "The name of the task to start execution at (optional)",
+      "type": "Optional[String]"
+    },
+    "par_limit": {
+      "description": "Limit playbook execution to specific hosts (optional)",
+      "type": "Optional[String]"
+    },
+    "par_verbose": {
+      "description": "Enable verbose output from Ansible (optional)",
+      "type": "Optional[Boolean]"
+    },
+    "par_check_mode": {
+      "description": "Run Ansible in check mode (dry-run) (optional)",
+      "type": "Optional[Boolean]"
+    },
+    "par_timeout": {
+      "description": "Timeout in seconds for playbook execution (optional)",
+      "type": "Optional[Integer]"
+    },
+    "par_user": {
+      "description": "Remote user to use for Ansible connections (optional)",
+      "type": "Optional[String]"
+    },
+    "par_env_vars": {
+      "description": "Additional environment variables for ansible-playbook execution (optional)",
+      "type": "Optional[Hash]"
+    }
+  },
+  "implementations": [
+    {
+      "name": "paw_ansible_role_nodejs.sh",
+      "requirements": [
+        "shell"
+      ],
+      "input_method": "environment"
+    },
+    {
+      "name": "paw_ansible_role_nodejs.ps1",
+      "requirements": [
+        "powershell"
+      ],
+      "input_method": "environment"
+    }
+  ]
+}

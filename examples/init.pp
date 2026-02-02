@@ -7,8 +7,8 @@ include paw_ansible_role_nodejs
 # class { 'paw_ansible_role_nodejs':
 #   npm_config_prefix => '/usr/local/lib/npm',
 #   nodejs_version => '16.x',
-#   npm_config_unsafe_perm => 'false',
+#   npm_config_unsafe_perm => false,
 #   nodejs_npm_global_packages => [],
 #   nodejs_package_json_path => undef,
-#   nodejs_generate_etc_profile => 'true',
+#   nodejs_generate_etc_profile => true,
 # }

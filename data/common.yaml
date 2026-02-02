@@ -1,7 +1,7 @@
 ---
 paw_ansible_role_nodejs::npm_config_prefix: "/usr/local/lib/npm"
 paw_ansible_role_nodejs::nodejs_version: 16.x
-paw_ansible_role_nodejs::npm_config_unsafe_perm: 'false'
+paw_ansible_role_nodejs::npm_config_unsafe_perm: false
 paw_ansible_role_nodejs::nodejs_npm_global_packages: []
 paw_ansible_role_nodejs::nodejs_package_json_path: ''
-paw_ansible_role_nodejs::nodejs_generate_etc_profile: 'true'
+paw_ansible_role_nodejs::nodejs_generate_etc_profile: true

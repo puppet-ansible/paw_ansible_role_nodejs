@@ -14,7 +14,7 @@
     },
     "npm_config_unsafe_perm": {
       "description": "set explicitly to false, then installing as a non-root user will fail.",
-      "type": "Optional[String]"
+      "type": "Optional[Boolean]"
     },
     "nodejs_npm_global_packages": {
       "description": "Define a list of global packages to be installed with NPM.",
@@ -26,7 +26,7 @@
     },
     "nodejs_generate_etc_profile": {
       "description": "Set to false if you need to handle this manually with a per-user install.",
-      "type": "Optional[String]"
+      "type": "Optional[Boolean]"
     },
     "par_tags": {
       "description": "An array of Ansible tags to execute (optional)",
